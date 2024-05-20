@@ -1,0 +1,1190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Assignemnt.css">
+    <title>Assignment</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/20c5629a29.js" crossorigin="anonymous"></script>
+</head>
+<body>    
+    <div class="top-section-bg" id="sectionPopular">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary bg-navbar">
+            <div class="container-fluid">
+              <a class="navbar-brand nav-head" href="#">MovieDb</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ml-auto">
+                  <li class="nav-item">
+                    <a class="nav-link text-white" href="#" onclick="display('sectionPopular')">Popular</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-white" href="#" onclick="display('sectionTopRated')">Top Rated</a>
+                  </li>
+                  
+                  <li class="nav-item">
+                    <a class="nav-link text-white" href="#"  onclick="display('sectionUpcoming')">Upcoming</a>
+                  </li>
+                </ul>
+                <form class="d-flex" role="search">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn-search" type="submit">Search</button>
+                </form>
+              </div>
+            </div>
+          </nav>
+
+        <div class="container">
+            <div class="row">
+                <div class="movie-card m-4" onclick="display('sectionVenom')">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQwlw6uNs68AisLUqFaZPlR9vmjN4OWZupJSjmf5LSGw&s" class="movie-card-img" />
+                    <h1 class="movie-card-head">Venom: Let There <br> Be Carnage</h1>
+                    <p class="movie-card-para">Rating 7.2</p>
+                </div>
+
+                <div class="movie-card m-4" onclick="display('sectionRedNotice')">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQschCDswAR6iCsuKrS6kj8HXs0QP5Z-w95NiwIUowkkg&s" class="movie-card-img" />
+                    <h1 class="movie-card-head">Red Notice</h1>
+                    <p class="movie-card-para">Rating 6.8</p>
+                </div>
+
+                <div class="movie-card m-4" onclick="display('sectionClifford')">
+                    <img src="https://images.justwatch.com/poster/255482004/s718/clifford-the-big-red-dog.jpg" class="movie-card-img" />
+                    <h1 class="movie-card-head">Clifford</h1>
+                    <p class="movie-card-para">Rating 7.2</p>
+                </div>
+
+                <div class="movie-card m-4" onclick="display('sectionShangChi')">
+                    <img src="https://cinematicsense.home.blog/wp-content/uploads/2021/09/shang-chi-poster-marvel.jpg" class="movie-card-img" />
+                    <h1 class="movie-card-head">Shang-Chi and the  <br>Legend of the Ten Rings</h1>
+                    <p class="movie-card-para">Rating 7.2</p>
+                </div>
+
+                <div class="movie-card m-4" onclick="display('sectionPlayers')">
+                    <img src="https://static.wikia.nocookie.net/netflix/images/b/b4/Players_poster_with_date.jpg/revision/latest?cb=20240127012708" class="movie-card-img" />
+                    <h1 class="movie-card-head">Players</h1>
+                    <p class="movie-card-para">Rating 8.8</p>
+                </div>
+
+                <div class="movie-card m-4" onclick="display('sectionGhost')">
+                    <img src="https://static.toiimg.com/photo/109586027.cms?imgsize=496990" class="movie-card-img" />
+                    <h1 class="movie-card-head">Ghostbusters: Frozen Empire</h1>
+                    <p class="movie-card-para">Rating 6.2</p>
+                </div>
+
+                <div class="movie-card m-4" onclick="display('sectionLast')">
+                    <img src="https://m.media-amazon.com/images/M/MV5BNTFkZjdjN2QtOGE5MS00ZTgzLTgxZjAtYzkyZWQ5MjEzYmZjXkEyXkFqcGdeQXVyMTM0NTUzNDIy._V1_.jpg" class="movie-card-img" />
+                    <h1 class="movie-card-head">Venom: The Last Dance</h1>
+                    <p class="movie-card-para">Rating 7.2</p>
+                </div>
+
+                <div class="movie-card m-4">
+                    <img src="https://calendarmedia.blob.core.windows.net/assets/965437ff-689d-4f85-ba07-13075b1bfa04.jpg" class="movie-card-img" />
+                    <h1 class="movie-card-head">IF</h1>
+                    <p class="movie-card-para">Rating 7.2</p>
+                </div>
+
+                
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="second-section-bg" id="sectionTopRated">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary bg-navbar">
+            <div class="container-fluid">
+              <a class="navbar-brand nav-head" href="#">MovieDb</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ml-auto">
+                  <li class="nav-item">
+                    <a class="nav-link text-white" href="#" onclick="display('sectionPopular')">Popular</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-white" href="#" onclick="display('sectionTopRated')">Top Rated</a>
+                  </li>
+                  
+                  <li class="nav-item">
+                    <a class="nav-link text-white" href="#"  onclick="display('sectionUpcoming')">Upcoming</a>
+                  </li>
+                </ul>
+                <form class="d-flex" role="search">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn-search" type="submit">Search</button>
+                </form>
+              </div>
+            </div>
+          </nav>
+
+
+        <div class="container">
+            <div class="row">
+                <div class="movie-card m-4">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQwlw6uNs68AisLUqFaZPlR9vmjN4OWZupJSjmf5LSGw&s" class="movie-card-img" />
+                    <h1 class="movie-card-head">Venom: Let There <br> Be Carnage</h1>
+                    <p class="movie-card-para">Rating 7.2</p>
+                </div>
+
+                <div class="movie-card m-4">
+                    <img src="https://wallpapers.com/images/hd/spider-man-no-way-home-digital-poster-qhrjykox1oo1f30n.jpg" class="movie-card-img" />
+                    <h1 class="movie-card-head">Spider-Man: <br> No Way Home</h1>
+                    <p class="movie-card-para">Rating 6.8</p>
+                </div>
+
+                <div class="movie-card m-4">
+                    <img src="https://images.justwatch.com/poster/255482004/s718/clifford-the-big-red-dog.jpg" class="movie-card-img" />
+                    <h1 class="movie-card-head">Clifford</h1>
+                    <p class="movie-card-para">Rating 7.2</p>
+                </div>
+
+                <div class="movie-card m-4">
+                    <img src="https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/the-gray-man-et00304733-24-05-2022-04-45-04.jpg" class="movie-card-img" />
+                    <h1 class="movie-card-head">The Gray Man
+                    </h1>
+                    <p class="movie-card-para">Rating 7.2</p>
+                </div>
+
+                <div class="movie-card m-4">
+                    <img src="https://i0.wp.com/www.nerdsandbeyond.com/wp-content/uploads/2023/12/0.jpeg?fit=540%2C800&ssl=1" class="movie-card-img" />
+                    <h1 class="movie-card-head">The Beekeeper</h1>
+                    <p class="movie-card-para">Rating 8.8</p>
+                </div>
+
+                <div class="movie-card m-4">
+                    <img src="https://jonsmalldon.files.wordpress.com/2024/03/damsel.jpg" class="movie-card-img" />
+                    <h1 class="movie-card-head">Damsel</h1>
+                    <p class="movie-card-para">Rating 9.5</p>
+                </div>
+
+                <div class="movie-card m-4">
+                    <img src="https://m.media-amazon.com/images/M/MV5BNTFkZjdjN2QtOGE5MS00ZTgzLTgxZjAtYzkyZWQ5MjEzYmZjXkEyXkFqcGdeQXVyMTM0NTUzNDIy._V1_.jpg" class="movie-card-img" />
+                    <h1 class="movie-card-head">Venom: The Last Dance</h1>
+                    <p class="movie-card-para">Rating 7.2</p>
+                </div>
+
+                <div class="movie-card m-4">
+                    <img src="https://calendarmedia.blob.core.windows.net/assets/965437ff-689d-4f85-ba07-13075b1bfa04.jpg" class="movie-card-img" />
+                    <h1 class="movie-card-head">IF</h1>
+                    <p class="movie-card-para">Rating 7.2</p>
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="second-section-bg" id="sectionUpcoming">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary bg-navbar">
+            <div class="container-fluid">
+              <a class="navbar-brand nav-head" href="#">MovieDb</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ml-auto">
+                  <li class="nav-item">
+                    <a class="nav-link text-white" href="#" onclick="display('sectionPopular')">Popular</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-white" href="#" onclick="display('sectionTopRated')">Top Rated</a>
+                  </li>
+                  
+                  <li class="nav-item">
+                    <a class="nav-link text-white" href="#"  onclick="display('sectionUpcoming')">Upcoming</a>
+                  </li>
+                </ul>
+                <form class="d-flex" role="search">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn-search" type="submit">Search</button>
+                </form>
+              </div>
+            </div>
+          </nav>
+
+
+        <div class="container">
+            <div class="row">
+                <div class="movie-card m-4">
+                    <img src="https://posterspy.com/wp-content/uploads/2024/02/joker-2-poster.jpg" class="movie-card-img" />
+                    <h1 class="movie-card-head">Joker: Folie à Deux</h1>
+                    <p class="movie-card-para">Rating 7.2</p>
+                </div>
+
+                <div class="movie-card m-4">
+                    <img src="https://www.dvdsreleasedates.com/posters/800/T/The-Contractor-2022-movie-poster.jpg" class="movie-card-img" />
+                    <h1 class="movie-card-head">The Contractor</h1>
+                    <p class="movie-card-para">Rating 6.8</p>
+                </div>
+
+                <div class="movie-card m-4">
+                    <img src="https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/the-gray-man-et00304733-24-05-2022-04-45-04.jpg" class="movie-card-img" />
+                    <h1 class="movie-card-head">The Gray Man
+                    </h1>
+                    <p class="movie-card-para">Rating 7.2</p>
+                </div>
+
+                <div class="movie-card m-4">
+                    <img src="https://i0.wp.com/www.nerdsandbeyond.com/wp-content/uploads/2023/12/0.jpeg?fit=540%2C800&ssl=1" class="movie-card-img" />
+                    <h1 class="movie-card-head">The Beekeeper</h1>
+                    <p class="movie-card-para">Rating 8.8</p>
+                </div>
+
+                <div class="movie-card m-4">
+                    <img src="https://jonsmalldon.files.wordpress.com/2024/03/damsel.jpg" class="movie-card-img" />
+                    <h1 class="movie-card-head">Damsel</h1>
+                    <p class="movie-card-para">Rating 9.5</p>
+                </div>
+
+                <div class="movie-card m-4">
+                    <img src="https://images.justwatch.com/poster/255482004/s718/clifford-the-big-red-dog.jpg" class="movie-card-img" />
+                    <h1 class="movie-card-head">Clifford</h1>
+                    <p class="movie-card-para">Rating 7.2</p>
+                </div>
+
+                <div class="movie-card m-4">
+                    <img src="https://m.media-amazon.com/images/M/MV5BNTFkZjdjN2QtOGE5MS00ZTgzLTgxZjAtYzkyZWQ5MjEzYmZjXkEyXkFqcGdeQXVyMTM0NTUzNDIy._V1_.jpg" class="movie-card-img" />
+                    <h1 class="movie-card-head">Venom: The Last Dance</h1>
+                    <p class="movie-card-para">Rating 7.2</p>
+                </div>
+
+                <div class="movie-card m-4">
+                    <img src="https://calendarmedia.blob.core.windows.net/assets/965437ff-689d-4f85-ba07-13075b1bfa04.jpg" class="movie-card-img" />
+                    <h1 class="movie-card-head">IF</h1>
+                    <p class="movie-card-para">Rating 7.2</p>
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div id="sectionVenom">
+
+        <nav class="navbar navbar-expand-lg bg-body-tertiary bg-navbar">
+            <div class="container-fluid">
+              <a class="navbar-brand nav-head" href="#">MovieDb</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ml-auto">
+                  <li class="nav-item">
+                    <a class="nav-link text-white" href="#" onclick="display('sectionPopular')">Popular</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-white" href="#" onclick="display('sectionTopRated')">Top Rated</a>
+                  </li>
+                  
+                  <li class="nav-item">
+                    <a class="nav-link text-white" href="#"  onclick="display('sectionUpcoming')">Upcoming</a>
+                  </li>
+                </ul>
+                <form class="d-flex" role="search">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn-search" type="submit">Search</button>
+                </form>
+              </div>
+            </div>
+          </nav>
+
+
+        <div class="container detail-top-card mt-5">
+            <div class="row">
+                <div>
+                    <div class="row">
+                        <div class="ml-5">
+                            <div class="row">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQwlw6uNs68AisLUqFaZPlR9vmjN4OWZupJSjmf5LSGw&s" class="detail-small-img" />
+                                <div class="mt-2">
+                                    <h1 class="detail-card-head">Venom: Let There Be Change</h1>
+                                    <p class="detail-rating">Rating 7.2</p>
+                                    <p class="genre"><button class="time-button">97 min</button> Science Fiction, Action, Adventure</p>
+                                    <p class="release">Release Date: Thu Sep 30 2021</p>
+                                </div>
+    
+                            </div>
+
+                            <div>
+                                <h1 class="detail-card-head">Overview</h1>
+                                <p class="detail-over">Eddie Brock is still struggling to coexist with the shape-shifting extraterrestrial Venom. When deranged serial killer Cletus Kasady also becomes host to an alien symbiote, Brock and Venom must put aside their differences to stop his reign of terror.</p>
+                            </div>
+
+                        </div>
+
+                        <img src="https://static1.srcdn.com/wordpress/wp-content/uploads/2021/09/Venom-Let-There-Be-Carnage-Movie-Reviews.jpeg" class="detail-img" />
+                        
+                        
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <h1 class="cast-text">Cast___________________________________________</h1>
+
+        <div class="row">
+            <div class="m-3">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Tom_Hardy_by_Gage_Skidmore.jpg/640px-Tom_Hardy_by_Gage_Skidmore.jpg" class="cast-img" />
+                <h1 class="cast-name">Tom Hardy</h1>
+                <p class="cast-char">Character: Eddie Brock / Venom</p>
+            </div>
+
+            <div class="m-3">
+                <img src="https://media.vanityfair.com/photos/582c824f364154776b0baad4/master/pass/Woody-Harrelson-on-The-Electoral-College%202.jpg" class="cast-img" />
+                <h1 class="cast-name">Woody Harrelson</h1>
+                <p class="cast-char">Character: Carnage</p>
+            </div>
+
+            <div class="m-3">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmCUlxLffr9CNq3Rafysxh3QpX-nfUSAhHe-Agb8EoBw&s" class="cast-img" />
+                <h1 class="cast-name">Michelle Williams</h1>
+                <p class="cast-char">Character: Anne Weying</p>
+            </div>
+
+            <div class="m-3">
+                <img src="https://www.preciousrosechildcenter.com/wp-content/uploads/2024/04/cropped-Tom-Holland-6-1.webp" class="cast-img" />
+                <h1 class="cast-name">Tom Holland</h1>
+                <p class="cast-char"></p>
+            </div>
+
+            <div class="m-3">
+                <img src="https://hollywoodlife.com/wp-content/uploads/2015/10/gettyimages-489446338.jpg?quality=100&w=620" class="cast-img" />
+                <h1 class="cast-name">Naomie Harris</h1>
+                <p class="cast-char">Character: Shriek</p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div id="sectionRedNotice">
+
+        <nav class="navbar navbar-expand-lg bg-body-tertiary bg-navbar">
+            <div class="container-fluid">
+              <a class="navbar-brand nav-head" href="#">MovieDb</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ml-auto">
+                  <li class="nav-item">
+                    <a class="nav-link text-white" href="#" onclick="display('sectionPopular')">Popular</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-white" href="#" onclick="display('sectionTopRated')">Top Rated</a>
+                  </li>
+                  
+                  <li class="nav-item">
+                    <a class="nav-link text-white" href="#"  onclick="display('sectionUpcoming')">Upcoming</a>
+                  </li>
+                </ul>
+                <form class="d-flex" role="search">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn-search" type="submit">Search</button>
+                </form>
+              </div>
+            </div>
+          </nav>
+
+
+        <div class="container detail-top-card mt-5">
+            <div class="row">
+                <div>
+                    <div class="row">
+                        <div class="ml-5">
+                            <div class="row">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQschCDswAR6iCsuKrS6kj8HXs0QP5Z-w95NiwIUowkkg&s" class="detail-small-img" />
+                                <div class="mt-2">
+                                    <h1 class="detail-card-head">Red Notice</h1>
+                                    <p class="detail-rating">Rating 6.8</p>
+                                    <p class="genre"><button class="time-button">118 min</button> Comedy, Thriller, Drama, Action</p>
+                                    <p class="release">Release Date: Nov 5 2021</p>
+                                </div>
+    
+                            </div>
+
+                            <div>
+                                <h1 class="detail-card-head">Overview</h1>
+                                <p class="detail-over">In the world of international crime, an Interpol agent attempts to hunt down and capture the world's most wanted art thief.</p>
+                            </div>
+
+                        </div>
+
+                        <img src="https://assets-prd.ignimgs.com/2021/11/01/rednotice-blogroll-1635791889536.jpg" class="detail-img" />
+                        
+                        
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <h1 class="cast-text">Cast___________________________________________</h1>
+
+        <div class="row">
+            <div class="m-3">
+                <img src="https://static.wikia.nocookie.net/dccu/images/1/13/Gal_Gadot.jpg/revision/latest?cb=20181116173555" class="cast-img" />
+                <h1 class="cast-name">Gal Gadot</h1>
+                <p class="cast-char">Character: The Bishop</p>
+            </div>
+
+            <div class="m-3">
+                <img src="https://m.media-amazon.com/images/M/MV5BODFmN2VmZmEtYTRjZi00ZjY1LTgxYjQtODMyNDI3ZDk4ZTJiXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_.jpg" class="cast-img" />
+                <h1 class="cast-name">Ryan Reynolds</h1>
+                <p class="cast-char">Character: Nolan Booth</p>
+            </div>
+
+            <div class="m-3">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/1/11/Dwayne_%22The_Rock%22_Johnson_Visits_the_Pentagon_%2841%29_%28cropped%29.jpg" class="cast-img" />
+                <h1 class="cast-name">Dwayne Johnson</h1>
+                <p class="cast-char"></p>
+            </div>
+
+            <div class="m-3">
+                <img src="https://m.media-amazon.com/images/M/MV5BNmE2OTA5MmMtZmJiNy00NmYyLTk4OTMtZGUxNmNmMTRkNmRhXkEyXkFqcGdeQXVyMjQwMDg0Ng@@._V1_.jpg" class="cast-img" />
+                <h1 class="cast-name">Ritu Arya</h1>
+                <p class="cast-char">Inspector Urvashi Das</p>
+            </div>
+
+            <div class="m-3">
+                <img src="https://static.wikia.nocookie.net/pantheon-amc/images/f/f1/Chris_Diamantopoulos.jpg/revision/latest?cb=20220912160625" class="cast-img" />
+                <h1 class="cast-name">Chris Diamantopoulos</h1>
+                <p class="cast-char">Character: Sotto voce</p>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div id="sectionClifford">
+
+        <nav class="navbar navbar-expand-lg bg-body-tertiary bg-navbar">
+            <div class="container-fluid">
+              <a class="navbar-brand nav-head" href="#">MovieDb</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ml-auto">
+                  <li class="nav-item">
+                    <a class="nav-link text-white" href="#" onclick="display('sectionPopular')">Popular</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-white" href="#" onclick="display('sectionTopRated')">Top Rated</a>
+                  </li>
+                  
+                  <li class="nav-item">
+                    <a class="nav-link text-white" href="#"  onclick="display('sectionUpcoming')">Upcoming</a>
+                  </li>
+                </ul>
+                <form class="d-flex" role="search">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn-search" type="submit">Search</button>
+                </form>
+              </div>
+            </div>
+          </nav>
+
+
+        <div class="container detail-top-card mt-5">
+            <div class="row">
+                <div>
+                    <div class="row">
+                        <div class="ml-5">
+                            <div class="row">
+                                <img src="https://images.justwatch.com/poster/255482004/s718/clifford-the-big-red-dog.jpg" class="detail-small-img" />
+                                <div class="mt-2">
+                                    <h1 class="detail-card-head">Clifford</h1>
+                                    <p class="detail-rating">Rating 7.2</p>
+                                    <p class="genre"><button class="time-button">96 min</button> Adventure · Comedy · Family · Fantasy</p>
+                                    <p class="release">Release Date: Nov 10 2021</p>
+                                </div>
+    
+                            </div>
+
+                            <div>
+                                <h1 class="detail-card-head">Overview</h1>
+                                <p class="detail-over">When Emily Elizabeth meets a magical animal rescuer who gives her a little red puppy, she never anticipated waking up to find a giant, 10-foot hound in her small New York City apartment. With her single mother away on business, Emily and her fun but impulsive uncle set out on an adventure that takes a bite out of the Big Apple.
+                                </p>
+                            </div>
+
+                        </div>
+
+                        <img src="https://www.the-sun.com/wp-content/uploads/sites/6/2021/06/NINTCHDBPICT000662694367.jpg" class="detail-img" />
+                        
+                        
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <h1 class="cast-text">Cast___________________________________________</h1>
+
+        <div class="row">
+            <div class="m-3">
+                <img src="https://m.media-amazon.com/images/M/MV5BOGExYzQ5MjUtMWRjYy00MmVmLThiZDktY2MwN2U1NGJjNjg5XkEyXkFqcGdeQXVyNTExODIyNDM@._V1_.jpg" class="cast-img" />
+                <h1 class="cast-name">Darby Camp</h1>
+                <p class="cast-char">Character: Emily Elizabeth</p>
+            </div>
+
+            <div class="m-3">
+                <img src="https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/580471_v9_bc.jpg" class="cast-img" />
+                <h1 class="cast-name">Jack Whitehall</h1>
+                <p class="cast-char">Character: Uncle Casey</p>
+            </div>
+
+            <div class="m-3">
+                <img src="https://kcwebsiteprod.s3.amazonaws.com/images/default-source/head-shots/mark-twain-prize-2018/tonyhale_600.jpg?sfvrsn=4" class="cast-img" />
+                <h1 class="cast-name">Tony Hale</h1>
+                <p class="cast-char">Character: Zac Tieran</p>
+            </div>
+
+            <div class="m-3">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/John_Cleese_Photo_Op_GalaxyCon_Richmond_2023.jpg/800px-John_Cleese_Photo_Op_GalaxyCon_Richmond_2023.jpg" class="cast-img" />
+                <h1 class="cast-name">John Cleese</h1>
+                <p class="cast-char">Character: Mr. Bridwell</p>
+            </div>
+
+            <div class="m-3">
+                <img src="https://www.shutterstock.com/editorial/image-editorial/O9T8c4w0Ndjec519Nzc0Mw==/sienna-guillory-440nw-9635931as.jpg" class="cast-img" />
+                <h1 class="cast-name">Sienna Guillory</h1>
+                <p class="cast-char">Character: Maggie Howard</p>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div id="sectionShangChi">
+
+        <nav class="navbar navbar-expand-lg bg-body-tertiary bg-navbar">
+            <div class="container-fluid">
+              <a class="navbar-brand nav-head" href="#">MovieDb</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ml-auto">
+                  <li class="nav-item">
+                    <a class="nav-link text-white" href="#" onclick="display('sectionPopular')">Popular</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-white" href="#" onclick="display('sectionTopRated')">Top Rated</a>
+                  </li>
+                  
+                  <li class="nav-item">
+                    <a class="nav-link text-white" href="#"  onclick="display('sectionUpcoming')">Upcoming</a>
+                  </li>
+                </ul>
+                <form class="d-flex" role="search">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn-search" type="submit">Search</button>
+                </form>
+              </div>
+            </div>
+          </nav>
+
+
+        <div class="container detail-top-card mt-5">
+            <div class="row">
+                <div>
+                    <div class="row">
+                        <div class="ml-5">
+                            <div class="row">
+                                <img src="https://cinematicsense.home.blog/wp-content/uploads/2021/09/shang-chi-poster-marvel.jpg" class="detail-small-img" />
+                                <div class="mt-2">
+                                    <h1 class="detail-card-head">Shang-Chi and the Legend
+                                        <br> of the Ten Rings</h1>
+                                    <p class="detail-rating">Rating 7.2</p>
+                                    <p class="genre"><button class="time-button">132 min</button> Fantasy, Super, Hero, Action, Adventure</p>
+                                    <p class="release">Release Date: Sep 2 2021</p>
+                                </div>
+    
+                            </div>
+
+                            <div>
+                                <h1 class="detail-card-head">Overview</h1>
+                                <p class="detail-over">Shang-Chi, a martial artist, lives a quiet life after he leaves his father and the shadowy Ten Rings organisation behind. Years later, he is forced to confront his past when the Ten Rings attack him.
+                                </p>
+                            </div>
+
+                        </div>
+
+                        <img src="https://film-authority.com/wp-content/uploads/2021/11/shang-chi-and-the-legend-of-the-ten-rings-social-feature.jpg" class="detail-img" />
+                        
+                        
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <h1 class="cast-text">Cast___________________________________________</h1>
+
+        <div class="row">
+            <div class="m-3">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/b/bf/Simu_Liu_by_Gage_Skidmore.jpg" class="cast-img" />
+                <h1 class="cast-name">Simu Liu</h1>
+                <p class="cast-char">Character: Shang-Chi</p>
+            </div>
+
+            <div class="m-3">
+                <img src="https://cdn.britannica.com/07/249407-050-1ADBD9A9/Awkwafina-2023.jpg" class="cast-img" />
+                <h1 class="cast-name">Awkwafina</h1>
+                <p class="cast-char">Character: Katy</p>
+            </div>
+
+            <div class="m-3">
+                <img src="https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/81012_v9_bb.jpg" class="cast-img" />
+                <h1 class="cast-name">Tony Leung Chiu-wai</h1>
+                <p class="cast-char">Character: Xu Wenwu</p>
+            </div>
+
+            <div class="m-3">
+                <img src="https://m.media-amazon.com/images/M/MV5BMTg0NTI0NDkzOF5BMl5BanBnXkFtZTcwMjYwMTIwNw@@._V1_.jpg" class="cast-img" />
+                <h1 class="cast-name">Michelle Yeoh</h1>
+                <p class="cast-char">Character: Ying Nan</p>
+            </div>
+
+            <div class="m-3">
+                <img src="https://static.wikia.nocookie.net/marvelmovies/images/3/35/Stephanie_Hsu.jpg/revision/latest?cb=20210905171516" class="cast-img" />
+                <h1 class="cast-name">Stephanie Hsu</h1>
+                <p class="cast-char">Character: Soo</p>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div id="sectionPlayers">
+
+        <nav class="navbar navbar-expand-lg bg-body-tertiary bg-navbar">
+            <div class="container-fluid">
+              <a class="navbar-brand nav-head" href="#">MovieDb</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ml-auto">
+                  <li class="nav-item">
+                    <a class="nav-link text-white" href="#" onclick="display('sectionPopular')">Popular</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-white" href="#" onclick="display('sectionTopRated')">Top Rated</a>
+                  </li>
+                  
+                  <li class="nav-item">
+                    <a class="nav-link text-white" href="#"  onclick="display('sectionUpcoming')">Upcoming</a>
+                  </li>
+                </ul>
+                <form class="d-flex" role="search">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn-search" type="submit">Search</button>
+                </form>
+              </div>
+            </div>
+          </nav>
+
+
+        <div class="container detail-top-card mt-5">
+            <div class="row">
+                <div>
+                    <div class="row">
+                        <div class="ml-5">
+                            <div class="row">
+                                <img src="https://static.wikia.nocookie.net/netflix/images/b/b4/Players_poster_with_date.jpg/revision/latest?cb=20240127012708" class="detail-small-img" />
+                                <div class="mt-2">
+                                    <h1 class="detail-card-head">Players</h1>
+                                    <p class="detail-rating">Rating 8.8</p>
+                                    <p class="genre"><button class="time-button">105 min</button> Comedy, Romance, Drama</p>
+                                    <p class="release">Release Date: Feb 14 2024</p>
+                                </div>
+    
+                            </div>
+
+                            <div>
+                                <h1 class="detail-card-head">Overview</h1>
+                                <p class="detail-over">New York sportswriter Mack devises successful hookup techniques with friend Adam and their crew, but when she unexpectedly falls head over heels for one of her targets, they all must learn what it takes to go from simply scoring to playing for keeps.
+                                </p>
+                            </div>
+
+                        </div>
+
+                        <img src="https://readysteadycut.com/wp-content/uploads/2024/02/Players-2.jpg" class="detail-img" />
+                        
+                        
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <h1 class="cast-text">Cast___________________________________________</h1>
+
+        <div class="row">
+            <div class="m-3">
+                <img src="https://i.pinimg.com/736x/1d/b5/9c/1db59ca91c9745970b54032aa175d596.jpg" class="cast-img" />
+                <h1 class="cast-name">Gina Rodriguez</h1>
+                <p class="cast-char">Character: Mack</p>
+            </div>
+
+            <div class="m-3">
+                <img src="https://es.web.img3.acsta.net/c_310_420/pictures/15/05/15/17/07/138236.jpg" class="cast-img" />
+                <h1 class="cast-name">Tom Ellis</h1>
+                <p class="cast-char">Character: Nick</p>
+            </div>
+
+            <div class="m-3">
+                <img src="https://pbs.twimg.com/media/FlF3e-_WYAECCfi?format=jpg&name=large" class="cast-img" />
+                <h1 class="cast-name">Liza Koshy</h1>
+                <p class="cast-char">Character: Ashley</p>
+            </div>
+
+            <div class="m-3">
+                <img src="https://m.media-amazon.com/images/M/MV5BMTcwMzk3ODAyNV5BMl5BanBnXkFtZTgwMDQ0ODM2NjE@._V1_.jpg" class="cast-img" />
+                <h1 class="cast-name">Joel Courtney</h1>
+                <p class="cast-char">Character: Little</p>
+            </div>
+
+            <div class="m-3">
+                <img src="https://m.media-amazon.com/images/M/MV5BMTk5NzgxNDUwMl5BMl5BanBnXkFtZTgwMzQzMTAwNzE@._V1_FMjpg_UX1000_.jpg" class="cast-img" />
+                <h1 class="cast-name">Augustus Prew</h1>
+                <p class="cast-char">Character: Brannagan</p>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div id="sectionGhost">
+
+        <nav class="navbar navbar-expand-lg bg-body-tertiary bg-navbar">
+            <div class="container-fluid">
+              <a class="navbar-brand nav-head" href="#">MovieDb</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ml-auto">
+                  <li class="nav-item">
+                    <a class="nav-link text-white" href="#" onclick="display('sectionPopular')">Popular</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-white" href="#" onclick="display('sectionTopRated')">Top Rated</a>
+                  </li>
+                  
+                  <li class="nav-item">
+                    <a class="nav-link text-white" href="#"  onclick="display('sectionUpcoming')">Upcoming</a>
+                  </li>
+                </ul>
+                <form class="d-flex" role="search">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn-search" type="submit">Search</button>
+                </form>
+              </div>
+            </div>
+          </nav>
+
+
+        <div class="container detail-top-card mt-5">
+            <div class="row">
+                <div>
+                    <div class="row">
+                        <div class="ml-5">
+                            <div class="row">
+                                <img src="https://static.toiimg.com/photo/109586027.cms?imgsize=496990" class="detail-small-img" />
+                                <div class="mt-2">
+                                    <h1 class="detail-card-head">Ghostbusters: Frozen Empire</h1>
+                                    <p class="detail-rating">Rating 6.2</p>
+                                    <p class="genre"><button class="time-button">115 min</button> Adventure, Comedy, Fantasy, Sci-Fi</p>
+                                    <p class="release">Release Date: Apr 26 2024</p>
+                                </div>
+    
+                            </div>
+
+                            <div>
+                                <h1 class="detail-card-head">Overview</h1>
+                                <p class="detail-over">The Spengler family returns to the iconic New York City firehouse where the original Ghostbusters have taken ghost-busting to the next level. When the discovery of an ancient artifact unleashes an evil force, Ghostbusters new and old must unite to protect their home and save the world from a second ice age.
+                                </p>
+                            </div>
+
+
+                        </div>
+
+                        <img src="https://sm.ign.com/ign_za/review/g/ghostbuste/ghostbusters-frozen-empire-review_xfsq.jpg" class="detail-img" />
+                        
+                        
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <h1 class="cast-text">Cast___________________________________________</h1>
+
+        <div class="row">
+            <div class="m-3">
+                <img src="https://static.wikia.nocookie.net/paw-patrol/images/1/1c/Mckenna_Grace.png/revision/latest/thumbnail/width/360/height/450?cb=20230613000755" class="cast-img" />
+                <h1 class="cast-name">Mckenna Grace</h1>
+                <p class="cast-char">Character: Phoebe Spengler</p>
+            </div>
+
+            <div class="m-3">
+                <img src="https://images.cinefil.com/stars/1058313.webp" class="cast-img" />
+                <h1 class="cast-name">Emily Alyn Lind</h1>
+                <p class="cast-char">Character: Melody</p>
+            </div>
+
+            <div class="m-3">
+                <img src="https://images.bravo.de/finn-wolfhard-10-fakten-uber-den-stranger-things-star-/9x16,id=e00d98d9,b=bravo,w=1600,h=,ca=32.25,0,69.75,100,rm=sk.jpeg" class="cast-img" />
+                <h1 class="cast-name">Finn Wolfhard</h1>
+                <p class="cast-char">Character: Trevor</p>
+            </div>
+
+            <div class="m-3">
+                <img src="https://static.wikia.nocookie.net/marvelcinematicuniverse/images/7/70/Bill_Murray.jpg/revision/latest/scale-to-width-down/1200?cb=20230207173829" class="cast-img" />
+                <h1 class="cast-name">Bill Murray</h1>
+                <p class="cast-char">Character: Dr. Peter</p>
+            </div>
+
+            <div class="m-3">
+                <img src="https://www.tvguide.com/a/img/resize/54719ad6b945146f4a24c8144e10039836eab9b2/catalog/provider/10/9/10-95225B8D-1E2B-4BBC-B698-6F06AD1152FB.png?auto=webp&fit=crop&height=300&width=200" class="cast-img" />
+                <h1 class="cast-name">Carrie Coon</h1>
+                <p class="cast-char">Character: Callie</p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div id="sectionLast">
+
+        <nav class="navbar navbar-expand-lg bg-body-tertiary bg-navbar">
+            <div class="container-fluid">
+              <a class="navbar-brand nav-head" href="#">MovieDb</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ml-auto">
+                  <li class="nav-item">
+                    <a class="nav-link text-white" href="#" onclick="display('sectionPopular')">Popular</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-white" href="#" onclick="display('sectionTopRated')">Top Rated</a>
+                  </li>
+                  
+                  <li class="nav-item">
+                    <a class="nav-link text-white" href="#"  onclick="display('sectionUpcoming')">Upcoming</a>
+                  </li>
+                </ul>
+                <form class="d-flex" role="search">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn-search" type="submit">Search</button>
+                </form>
+              </div>
+            </div>
+          </nav>
+
+
+        <div class="container detail-top-card mt-5">
+            <div class="row">
+                <div>
+                    <div class="row">
+                        <div class="ml-5">
+                            <div class="row">
+                                <img src="https://m.media-amazon.com/images/M/MV5BNTFkZjdjN2QtOGE5MS00ZTgzLTgxZjAtYzkyZWQ5MjEzYmZjXkEyXkFqcGdeQXVyMTM0NTUzNDIy._V1_.jpg" class="detail-small-img" />
+                                <div class="mt-2">
+                                    <h1 class="detail-card-head">Venom: The Last Dance</h1>
+                                    <p class="detail-rating">Rating 7.2</p>
+                                    <p class="genre"><button class="time-button">97 min</button> Science Fiction, Action, Adventure</p>
+                                    <p class="release">Release Date: Oct 24 2024</p>
+                                </div>
+    
+                            </div>
+
+                            <div>
+                                <h1 class="detail-card-head">Overview</h1>
+                                <p class="detail-over">Eddie Brock is still struggling to coexist with the shape-shifting extraterrestrial Venom. When deranged serial killer Cletus Kasady also becomes host to an alien symbiote, Brock and Venom must put aside their differences to stop his reign of terror.</p>
+                            </div>
+
+                        </div>
+
+                        <img src="https://static1.srcdn.com/wordpress/wp-content/uploads/2021/09/Venom-Let-There-Be-Carnage-Movie-Reviews.jpeg" class="detail-img" />
+                        
+                        
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <h1 class="cast-text">Cast___________________________________________</h1>
+
+        <div class="row">
+            <div class="m-3">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Tom_Hardy_by_Gage_Skidmore.jpg/640px-Tom_Hardy_by_Gage_Skidmore.jpg" class="cast-img" />
+                <h1 class="cast-name">Tom Hardy</h1>
+                <p class="cast-char">Character: Eddie Brock / Venom</p>
+            </div>
+
+            <div class="m-3">
+                <img src="https://media.vanityfair.com/photos/582c824f364154776b0baad4/master/pass/Woody-Harrelson-on-The-Electoral-College%202.jpg" class="cast-img" />
+                <h1 class="cast-name">Woody Harrelson</h1>
+                <p class="cast-char">Character: Carnage</p>
+            </div>
+
+            <div class="m-3">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmCUlxLffr9CNq3Rafysxh3QpX-nfUSAhHe-Agb8EoBw&s" class="cast-img" />
+                <h1 class="cast-name">Michelle Williams</h1>
+                <p class="cast-char">Character: Anne Weying</p>
+            </div>
+
+            <div class="m-3">
+                <img src="https://www.preciousrosechildcenter.com/wp-content/uploads/2024/04/cropped-Tom-Holland-6-1.webp" class="cast-img" />
+                <h1 class="cast-name">Tom Holland</h1>
+                <p class="cast-char"></p>
+            </div>
+
+            <div class="m-3">
+                <img src="https://hollywoodlife.com/wp-content/uploads/2015/10/gettyimages-489446338.jpg?quality=100&w=620" class="cast-img" />
+                <h1 class="cast-name">Naomie Harris</h1>
+                <p class="cast-char">Character: Shriek</p>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div id="sectionIf">
+
+        <nav class="navbar navbar-expand-lg bg-body-tertiary bg-navbar">
+            <div class="container-fluid">
+              <a class="navbar-brand nav-head" href="#">MovieDb</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ml-auto">
+                  <li class="nav-item">
+                    <a class="nav-link text-white" href="#" onclick="display('sectionPopular')">Popular</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-white" href="#" onclick="display('sectionTopRated')">Top Rated</a>
+                  </li>
+                  
+                  <li class="nav-item">
+                    <a class="nav-link text-white" href="#"  onclick="display('sectionUpcoming')">Upcoming</a>
+                  </li>
+                </ul>
+                <form class="d-flex" role="search">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn-search" type="submit">Search</button>
+                </form>
+              </div>
+            </div>
+          </nav>
+
+
+        <div class="container detail-top-card mt-5">
+            <div class="row">
+                <div>
+                    <div class="row">
+                        <div class="ml-5">
+                            <div class="row">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQwlw6uNs68AisLUqFaZPlR9vmjN4OWZupJSjmf5LSGw&s" class="detail-small-img" />
+                                <div class="mt-2">
+                                    <h1 class="detail-card-head">Venom: Let There Be Change</h1>
+                                    <p class="detail-rating">Rating 7.2</p>
+                                    <p class="genre"><button class="time-button">97 min</button> Science Fiction, Action, Adventure</p>
+                                    <p class="release">Release Date: Thu Sep 30 2021</p>
+                                </div>
+    
+                            </div>
+
+                            <div>
+                                <h1 class="detail-card-head">Overview</h1>
+                                <p class="detail-over">Eddie Brock is still struggling to coexist with the shape-shifting extraterrestrial Venom. When deranged serial killer Cletus Kasady also becomes host to an alien symbiote, Brock and Venom must put aside their differences to stop his reign of terror.</p>
+                            </div>
+
+                        </div>
+
+                        <img src="https://static1.srcdn.com/wordpress/wp-content/uploads/2021/09/Venom-Let-There-Be-Carnage-Movie-Reviews.jpeg" class="detail-img" />
+                        
+                        
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <h1 class="cast-text">Cast___________________________________________</h1>
+
+        <div class="row">
+            <div class="m-3">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Tom_Hardy_by_Gage_Skidmore.jpg/640px-Tom_Hardy_by_Gage_Skidmore.jpg" class="cast-img" />
+                <h1 class="cast-name">Tom Hardy</h1>
+                <p class="cast-char">Character: Eddie Brock / Venom</p>
+            </div>
+
+            <div class="m-3">
+                <img src="https://media.vanityfair.com/photos/582c824f364154776b0baad4/master/pass/Woody-Harrelson-on-The-Electoral-College%202.jpg" class="cast-img" />
+                <h1 class="cast-name">Woody Harrelson</h1>
+                <p class="cast-char">Character: Carnage</p>
+            </div>
+
+            <div class="m-3">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmCUlxLffr9CNq3Rafysxh3QpX-nfUSAhHe-Agb8EoBw&s" class="cast-img" />
+                <h1 class="cast-name">Michelle Williams</h1>
+                <p class="cast-char">Character: Anne Weying</p>
+            </div>
+
+            <div class="m-3">
+                <img src="https://www.preciousrosechildcenter.com/wp-content/uploads/2024/04/cropped-Tom-Holland-6-1.webp" class="cast-img" />
+                <h1 class="cast-name">Tom Holland</h1>
+                <p class="cast-char"></p>
+            </div>
+
+            <div class="m-3">
+                <img src="https://hollywoodlife.com/wp-content/uploads/2015/10/gettyimages-489446338.jpg?quality=100&w=620" class="cast-img" />
+                <h1 class="cast-name">Naomie Harris</h1>
+                <p class="cast-char">Character: Shriek</p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div id="sectionVenom">
+
+        <nav class="navbar navbar-expand-lg bg-body-tertiary bg-navbar">
+            <div class="container-fluid">
+              <a class="navbar-brand nav-head" href="#">MovieDb</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ml-auto">
+                  <li class="nav-item">
+                    <a class="nav-link text-white" href="#" onclick="display('sectionPopular')">Popular</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-white" href="#" onclick="display('sectionTopRated')">Top Rated</a>
+                  </li>
+                  
+                  <li class="nav-item">
+                    <a class="nav-link text-white" href="#"  onclick="display('sectionUpcoming')">Upcoming</a>
+                  </li>
+                </ul>
+                <form class="d-flex" role="search">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn-search" type="submit">Search</button>
+                </form>
+              </div>
+            </div>
+          </nav>
+
+
+        <div class="container detail-top-card mt-5">
+            <div class="row">
+                <div>
+                    <div class="row">
+                        <div class="ml-5">
+                            <div class="row">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQwlw6uNs68AisLUqFaZPlR9vmjN4OWZupJSjmf5LSGw&s" class="detail-small-img" />
+                                <div class="mt-2">
+                                    <h1 class="detail-card-head">Venom: Let There Be Change</h1>
+                                    <p class="detail-rating">Rating 7.2</p>
+                                    <p class="genre"><button class="time-button">97 min</button> Science Fiction, Action, Adventure</p>
+                                    <p class="release">Release Date: Thu Sep 30 2021</p>
+                                </div>
+    
+                            </div>
+
+                            <div>
+                                <h1 class="detail-card-head">Overview</h1>
+                                <p class="detail-over">Eddie Brock is still struggling to coexist with the shape-shifting extraterrestrial Venom. When deranged serial killer Cletus Kasady also becomes host to an alien symbiote, Brock and Venom must put aside their differences to stop his reign of terror.</p>
+                            </div>
+
+                        </div>
+
+                        <img src="https://static1.srcdn.com/wordpress/wp-content/uploads/2021/09/Venom-Let-There-Be-Carnage-Movie-Reviews.jpeg" class="detail-img" />
+                        
+                        
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <h1 class="cast-text">Cast___________________________________________</h1>
+
+        <div class="row">
+            <div class="m-3">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Tom_Hardy_by_Gage_Skidmore.jpg/640px-Tom_Hardy_by_Gage_Skidmore.jpg" class="cast-img" />
+                <h1 class="cast-name">Tom Hardy</h1>
+                <p class="cast-char">Character: Eddie Brock / Venom</p>
+            </div>
+
+            <div class="m-3">
+                <img src="https://media.vanityfair.com/photos/582c824f364154776b0baad4/master/pass/Woody-Harrelson-on-The-Electoral-College%202.jpg" class="cast-img" />
+                <h1 class="cast-name">Woody Harrelson</h1>
+                <p class="cast-char">Character: Carnage</p>
+            </div>
+
+            <div class="m-3">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmCUlxLffr9CNq3Rafysxh3QpX-nfUSAhHe-Agb8EoBw&s" class="cast-img" />
+                <h1 class="cast-name">Michelle Williams</h1>
+                <p class="cast-char">Character: Anne Weying</p>
+            </div>
+
+            <div class="m-3">
+                <img src="https://www.preciousrosechildcenter.com/wp-content/uploads/2024/04/cropped-Tom-Holland-6-1.webp" class="cast-img" />
+                <h1 class="cast-name">Tom Holland</h1>
+                <p class="cast-char"></p>
+            </div>
+
+            <div class="m-3">
+                <img src="https://hollywoodlife.com/wp-content/uploads/2015/10/gettyimages-489446338.jpg?quality=100&w=620" class="cast-img" />
+                <h1 class="cast-name">Naomie Harris</h1>
+                <p class="cast-char">Character: Shriek</p>
+            </div>
+
+        </div>
+
+    </div>
+
+    
+
+    <script type="text/javascript" src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/js/ccbp-ui-kit.js"></script>
+
+</body>
+</html>
